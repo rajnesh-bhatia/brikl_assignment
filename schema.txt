@@ -1,0 +1,10 @@
+Table: Products
+(product_id (primary key), title, description, price, available_date, stock_quantity, product_type)
+
+Table: Stores
+(store_id (primary key), name)
+
+Table: Store_Products (many-to-many relationship table)
+(store_id (foreign key referencing Stores.store_id), product_id (foreign key referencing Products.product_id)
+
+With this schema design, the "Products" table stores information about each product, including its attributes. The "Stores" table stores information about each store. The "Store_Products" table establishes a many-to-many relationship between stores and products. It allows a store to have multiple products, and a product can be associated with multiple stores.
